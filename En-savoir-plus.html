@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Nos réseaux sociaux/</title>
+<link rel="icon" type="image/x-icon" href="fav.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+       
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #f6f4f0;
+            box-sizing: border-box;
+        }
+
+        #case_1 {
+            width: 400px;
+            height: 100vh;
+            background-color: #027361;
+            position: absolute;
+            left: 0;
+            top: 0;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        #titre-case-1 {
+            color: #f6f4f0;
+            font-family: "Jost", sans-serif;
+            font-weight: 700;
+            font-size: 2.2rem;
+            position: absolute;
+            left: 10%;
+            top: 5%;
+        }
+
+        #txt-case-1 {
+            color: #f6f4f0;
+            font-family: "Jost", sans-serif;
+            font-weight: 700;
+            width: 300px;
+            position: absolute;
+            left: 10%;
+            top: 15%;
+            line-height: 1.4;
+            font-size: 1rem;
+        }
+
+        #Menu_retour {
+            padding: 15px 30px;
+            border: 2px solid #2c2c2c;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.4s ease;
+            outline: none;
+            overflow: hidden;
+            font-weight: bold;
+            position: absolute;
+            left: 10%;
+            top: 65%;
+            transform: scale(0.85);
+            transform-origin: left;
+        }
+
+        #Menu_retour::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+                circle,
+                rgba(255, 255, 255, 0.25) 0%,
+                rgba(255, 255, 255, 0) 70%
+            );
+            transform: scale(0);
+            transition: transform 0.5s ease;
+        }
+
+        #Menu_retour:hover::after {
+            transform: scale(4);
+        }
+
+        #Menu_retour:hover {
+            border-color: #666666;
+            background: #292929;
+        }
+
+        #txt-R-SOCIAUX {
+            position: absolute;
+            top: 10%;
+            left: 630px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 3.5rem;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+       
+        .card {
+            position: absolute;
+            top: 30%;
+            width: 190px;
+            height: 190px;
+            border-radius: 30px;
+            background: #f3f0f0;
+            box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+
+        .card_rs_tiktok { left: 600px; }
+        .card_rs_insta { left: 830px; }
+        .card_rs_facebook { left: 1060px; }
+
+        #tiktok_logo {
+            width: 90px;
+            height: auto;
+        }
+
+        #insta_logo {
+            width: 120px;
+            height: auto;
+        }
+
+        #facebook_logo {
+            width: 110px;
+            height: auto;
+        }
+
+
+      
+        @media screen and (max-width: 768px) {
+            html, body {
+                overflow-y: auto;
+                height: auto;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #case_1 {
+                position: static;
+                width: 100%;
+                height: auto;
+                padding: 30px 20px 40px 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            #titre-case-1 {
+                position: static;
+                margin-bottom: 15px;
+            }
+
+            #txt-case-1 {
+                position: static;
+                width: 90%;
+                font-size: 0.95rem;
+                margin-bottom: 25px;
+            }
+
+            #Menu_retour {
+                position: static;
+                transform: scale(1);
+            }
+
+            #txt-R-SOCIAUX {
+                position: static;
+                font-size: 2rem;
+                text-align: center;
+                margin: 40px 0 20px 0;
+            }
+
+            .card {
+                position: static;
+                margin-bottom: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="case_1">
+        <h2 id="titre-case-1">À propos de nous !</h2>
+        <h3 id="txt-case-1">
+            " Salut, on est un groupe de jeunes qui cherchent un travail. Au Québec, il est de plus en plus dur de se trouver un travail et un moyen de se trouver de l’argent, et notre idée a été de revenir à l’ancienne. On demande aux gens s'ils ont quelque chose à nous faire faire pour un salaire raisonnable. On essaie de toucher un peu à tout. Merci de nous proposer un travail si nos services vous intéressent. "
+        </h3>
+        <button id="Menu_retour" onclick="window.location.href = 'index.html'">Revenir au Menu</button>
+    </div>
+
+    <h1 id="txt-R-SOCIAUX">NOS RÉSEAUX SOCIAUX</h1>
+
+    <div class="card card_rs_tiktok" onclick="window.open('https://www.tiktok.com/@2gars.beaucoup.de.bras', '_blank');">
+        <img id="tiktok_logo" src="tiktok_logo.png" alt="TikTok">
+    </div>
+
+    <div class="card card_rs_insta" onclick="window.open('https://www.instagram.com/2gars.beaucoup.de.bras', '_blank');">
+        <img id="insta_logo" src="insta-logo.png" alt="Instagram">
+    </div>
+
+    <div class="card card_rs_facebook" onclick="window.open('https://www.facebook.com/share/14mjadBJWwX/', '_blank');">
+        <img id="facebook_logo" src="facebook-logo.png" alt="Facebook">
+    </div>
+
+</body>
+</html>
+

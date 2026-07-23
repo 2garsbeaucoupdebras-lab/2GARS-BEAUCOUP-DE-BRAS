@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home/</title>
+
+   
+    <link rel="icon" type="image/x-icon" href="fav.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; 
+            background-color: #f6f4f0;
+            box-sizing: border-box;
+        }
+
+        #submit-email-box {
+            color: white;
+            background-color: black;
+            font-weight: bold;
+            font-size: 0.8rem;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        #btn-en-savoir-plus {
+            padding: 15px 30px;
+            border: 2px solid #2c2c2c;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.4s ease;
+            outline: none;
+            overflow: hidden;
+            font-weight: bold;
+            position: absolute;
+            left: 8%;
+            top: 48%;
+            transform: scale(0.7);
+            margin-top: 1.5%;
+        }
+
+        #btn-en-savoir-plus::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+                circle,
+                rgba(255, 255, 255, 0.25) 0%,
+                rgba(255, 255, 255, 0) 70%
+            );
+            transform: scale(0);
+            transition: transform 0.5s ease;
+        }
+
+        #btn-en-savoir-plus:hover::after {
+            transform: scale(4);
+        }
+
+        #btn-en-savoir-plus:hover {
+            border-color: #666666;
+            background: #292929;
+        }
+
+        #title-box-email {
+            color: white;
+            font-family: "Space Grotesk", sans-serif;
+            width: 200px;
+        }
+
+        #txt-bienvenue {
+            position: absolute;
+            margin-top: 10%;
+            margin-left: 10%;
+            margin-bottom: 30%;
+            width: 900px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 5.5rem;
+        }
+
+        #box-email-form > * {
+            margin-bottom: 2%;
+            width: 220px;
+            height: 24px;
+        }
+
+        #textarea-box-email {
+            resize: none;
+            height: 100px;
+        }
+
+        #box_email {
+            width: 10%;
+            height: 100%;
+            position: absolute;
+            left: 12%;
+            z-index: 2;
+            top: 8%;
+        }
+
+        #box-e {
+            background-color: #027361;
+            height: 500px;
+            width: 310px;
+            position: absolute;
+            transform: scale(1.5);
+            justify-items: auto;
+            left: 75%;
+            top: 17%;
+        }
+
+        #description-1 {
+            width: 500px;
+            position: absolute;
+            margin-left: 10%;
+            margin-top: 18%;
+            font-family: "Jost", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        #logo_img {
+            width: 100px;
+            height: 100px;
+            top: 0%;
+            position: absolute;
+            z-index: 10;
+        }
+          @media screen and (max-width: 100px), screen and (max-height: 600px) {
+  body::before {
+    content: "Écran trop petit pour afficher le site correctement.";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000; /* Fond noir */
+    color: #ffffff;            /* Texte blanc */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.2rem;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 99999;            /* Reste au-dessus de TOUT le contenu */
+  }
+}
+       
+        @media screen and (max-width: 768px) {
+            html, body {
+                overflow-y: auto; 
+                height: auto;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                padding-top: 80px; 
+            }
+
+            #logo_img {
+                width: 70px;
+                height: 70px;
+                left: 10px;
+            }
+
+            #txt-bienvenue {
+                position: static;
+                width: 100%;
+                font-size: 2.8rem;
+                text-align: center;
+                margin: 20px 0 10px 0;
+            }
+
+            #description-1 {
+                position: static;
+                width: 90%;
+                text-align: center;
+                margin: 10px 0 20px 0;
+                font-size: 0.95rem;
+            }
+
+            #btn-en-savoir-plus {
+                position: static;
+                transform: scale(1);
+                margin: 10px 0 30px 0;
+                width: 80%;
+                max-width: 250px;
+                text-align: center;
+            }
+
+            #box-e {
+                position: static;
+                transform: scale(1);
+                width: 90%;
+                max-width: 350px;
+                height: auto;
+                padding: 25px 15px;
+                border-radius: 12px;
+                margin-bottom: 40px;
+                box-sizing: border-box;
+            }
+
+            #box_email {
+                position: static;
+                width: 100%;
+                height: auto;
+            }
+
+            #title-box-email {
+                width: 100%;
+                text-align: center;
+                margin-top: 0;
+            }
+
+            #box-email-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #box-email-form > * {
+                width: 100%;
+                max-width: 280px;
+                box-sizing: border-box;
+                margin-bottom: 12px;
+            }
+
+            #submit-email-box {
+                height: 35px;
+            }
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <img id="logo_img" src="logo.png" alt="Logo">
+
+    <h1 id="txt-bienvenue">BIENVENUE!👋</h1>
+
+    <h4 id="description-1">“ Salut, on est des jeunes cherchant un travail. Malheureusement à notre époque la confiance vis-à-vis des jeunes est presque inexistante , permettre à nous de faire la différence "</h4>
+
+    <button id="btn-en-savoir-plus" onclick="window.location.href = 'En-savoir-plus.html'">En savoir plus</button>
+
+    <div id="box-e">
+        <div id="box_email">
+            <h2 id="title-box-email">Envoyez-nous un courriel !</h2>
+            <form id="box-email-form">
+                <input type="text" id="name" name="Nom:" placeholder="Votre Nom*" autocomplete="name" required>
+                <input type="email" id="mail" autocomplete="email" name="Contact:" placeholder="Courriel*" required>
+                <input type="text" id="task" name="Job proposé:" placeholder="Nom de la tâche" required>
+                <input type="number" id="salary" step="0.01" name="Salaire totale pour la tâche:" placeholder="Salaire totale pour la tâche (nombre)">
+                <input type="text" id="adresse" name="Adresse:" autocomplete="street-address" placeholder="adresse, ville, Code Postale">
+                <textarea id="textarea-box-email" name="Message:" placeholder="Description de la tâche/Précision"></textarea>
+                <button id="submit-email-box" type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "V4AlVSqqFLlb0ZwD0",
+            });
+        })();
+
+        function sendEmail(event) {
+            event.preventDefault(); 
+
+            let parms = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("mail").value,
+                task: document.getElementById("task").value,
+                adresse: document.getElementById("adresse").value,
+                salary: document.getElementById("salary").value,
+                message: document.getElementById("textarea-box-email").value,
+            };
+
+            emailjs.send("service_xjwm76p", "template_hjtbv94", parms)
+                .then(() => {
+                    alert("Email Envoyé! Merci!");
+                    document.getElementById("box-email-form").reset(); 
+                })
+                .catch((error) => {
+                    console.error("Erreur lors de l'envoi :", error);
+                    alert("Une erreur est survenue lors de l'envoi.");
+                });
+        }
+
+        document.getElementById("box-email-form").addEventListener("submit", sendEmail);
+    </script>
+</body>
+</html>
+
