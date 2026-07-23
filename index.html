@@ -31,8 +31,29 @@
             font-size: 0.8rem;
             height: 20px;
             cursor: pointer;
+            
         }
-
+         #service-btn {
+            position: static;
+            color: #000000;
+            text-decoration: underline;
+            background-color: transparent;
+            border: 0;
+            font-size: 0.8rem;
+             font-family: "Space Grotesk", sans-serif;
+             margin-top: 5%;
+            }
+             #service-btn:hover {
+            position: static;
+            color: #343333;
+            transition:ease 1s;
+            text-decoration: underline;
+            background-color: transparent;
+            border: 0;
+            font-size: 0.82rem;
+            margin-top: 5%;
+             
+            }
         #btn-en-savoir-plus {
             padding: 15px 30px;
             border: 2px solid #2c2c2c;
@@ -115,7 +136,7 @@
 
         #box-e {
             background-color: #027361;
-            height: 500px;
+            height: 600px;
             width: 310px;
             position: absolute;
             transform: scale(1.5);
@@ -149,8 +170,8 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #000000; /* Fond noir */
-    color: #ffffff;            /* Texte blanc */
+    background-color: #000000; 
+    color: #ffffff;            
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,9 +180,8 @@
     font-size: 1.2rem;
     padding: 20px;
     box-sizing: border-box;
-    z-index: 99999;            /* Reste au-dessus de TOUT le contenu */
-  }
-}
+    z-index: 99999;            
+}}
        
         @media screen and (max-width: 768px) {
             html, body {
@@ -175,6 +195,16 @@
                 align-items: center;
                 padding: 20px;
                 padding-top: 80px; 
+            }
+
+           #service-btn {
+            position: static;
+            color: #000000;
+            text-decoration: underline;
+            background-color: transparent;
+            border: 0;
+            font-size: 1.1rem;
+             font-family: "Space Grotesk", sans-serif;
             }
 
             #logo_img {
@@ -259,8 +289,8 @@
 
     <h1 id="txt-bienvenue">BIENVENUE!👋</h1>
 
-    <h4 id="description-1">“ Salut, on est des jeunes cherchant un travail. Malheureusement à notre époque la confiance vis-à-vis des jeunes est presque inexistante , permettre à nous de faire la différence "</h4>
-
+    <h4 id="description-1">" Salut, nous sommes des jeunes à la recherche d’un emploi. Malheureusement, à notre époque, la confiance envers les jeunes est presque inexistante. Permettez-nous de faire la différence. "</h4>
+     
     <button id="btn-en-savoir-plus" onclick="window.location.href = 'En-savoir-plus.html'">En savoir plus</button>
 
     <div id="box-e">
@@ -269,11 +299,13 @@
             <form id="box-email-form">
                 <input type="text" id="name" name="Nom:" placeholder="Votre Nom*" autocomplete="name" required>
                 <input type="email" id="mail" autocomplete="email" name="Contact:" placeholder="Courriel*" required>
+                 <input type="tel" id="tel" autocomplete="tel" name="tel:" placeholder="Numéro de téléphone" required>
                 <input type="text" id="task" name="Job proposé:" placeholder="Nom de la tâche" required>
                 <input type="number" id="salary" step="0.01" name="Salaire totale pour la tâche:" placeholder="Salaire totale pour la tâche (nombre)">
                 <input type="text" id="adresse" name="Adresse:" autocomplete="street-address" placeholder="adresse, ville, Code Postale">
                 <textarea id="textarea-box-email" name="Message:" placeholder="Description de la tâche/Précision"></textarea>
                 <button id="submit-email-box" type="submit">Envoyer</button>
+                <button type="button" id="service-btn" onclick="window.location.href = 'services.html'">Nos Sevices</button>
             </form>
         </div>
     </div>
@@ -293,6 +325,7 @@
             let parms = {
                 name: document.getElementById("name").value,
                 email: document.getElementById("mail").value,
+                tel: document.getElementById("tel").value,
                 task: document.getElementById("task").value,
                 adresse: document.getElementById("adresse").value,
                 salary: document.getElementById("salary").value,
@@ -314,4 +347,3 @@
     </script>
 </body>
 </html>
-
