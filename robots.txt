@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://2garsbeaucoupdebras-lab.github.io/2GARS-BEAUCOUP-DE-BRAS/sitemap.xml
